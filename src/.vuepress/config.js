@@ -44,14 +44,6 @@ module.exports = {
             link: '/zh/standard/Start.md'
           },
           {
-            text: '算法',
-            items: [
-              { text: '编程基本功', link: '/zh/algorithm/Charpter4.md'},
-              { text: '数学趣题(一)', link: '/zh/algorithm/Charpter5.md'},
-              { text: '数学趣题(二)', link: '/zh/algorithm/Charpter6.md'}
-            ],
-          },
-          {
             text: '项目相关',
             items: [
               { text: '前端规范', link: '/zh/standard/Standard.md'},
@@ -64,6 +56,7 @@ module.exports = {
             text: '知名公司面试题',
             items: [
               { text: '面试必看', link: '/zh/interview/index.md'},
+              { text: '经典面试', link: '/zh/interview/question.md'},
               { text: '阿里巴巴', link: '/zh/interview/ali.md'},
               { text: '龙湖地产', link: '/zh/interview/longhu.md'}
             ]
@@ -74,10 +67,7 @@ module.exports = {
               { text: '在线思维导图', link: '/zh/interface/Mind.md'},
               { text: 'Vue', link: '/zh/vue/' },
               { text: 'React', link: '/zh/react/'},
-              { text: '小程序', link: '/zh/miniapp/' },
-              { text: '悦读管理后台', link: '/zh/interface/Yuedu.md'},
-              { text: 'BlackMarket', link: '/zh/interface/BlackMarket.md'},
-              { text: 'TouTiao', link: '/zh/interface/TouTiao.md'}
+              { text: '小程序', link: '/zh/miniapp/' }
             ]
           },
           // {
@@ -103,7 +93,7 @@ module.exports = {
             '', 'Es6', 'Es6方法扩展', 'Webpack', 'Babel', 'Promise', 'Vue 各种方法之间的区别', 'Vue组件', 'Vue路由', 'Vue动画', 'vue钩子函数', 'vuex'
           ]}],
           '/zh/react/': [{title: 'React知识点', children: [
-            '', 'JSX', 'MVVM', 'Props', 'React生命周期', 'React组件', 'React路由', 'redux', 'redux中间件', '组件通信', '高阶组件'
+            '', 'JSX', 'MVVM', 'Props', 'React生命周期', 'React组件', 'React路由', 'redux', 'redux中间件', '组件通信', '高阶组件', 'Diff算法'
           ]}],
           '/zh/miniapp/': [{title: '小程序知识点', children: [
             '', 'WXS', 'wepy组件通信', '小程序事件', '小程序路由', '小程序组件', '小程序组件化'

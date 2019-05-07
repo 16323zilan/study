@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="280" src="http://123.206.55.50:11000/static/97SiscIRjYh1C1NfZzmY3e90.png" alt="logo">
+  <img width="280" src="http://img2.zol.com.cn/product/109/501/ceOSW4sBFD8kk.jpg" alt="logo">
 </p>
 
 ## Target
