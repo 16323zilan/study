@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>请用递归的方式遍历树形数据结构中的每一个节点 | 前端知识点总结</title>
+    <title>算法题 | 前端知识点总结</title>
     <meta name="description" content="开花的树">
     <link rel="icon" href="/study/logo.png">
   <link rel="manifest" href="/study/manifest.json">
@@ -15,155 +15,245 @@
   <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#000000">
     
-    <link rel="preload" href="/study/assets/css/styles.14c5c194.css" as="style"><link rel="preload" href="/study/assets/js/app.14c5c194.js" as="script"><link rel="preload" href="/study/assets/js/29.13ee89db.js" as="script"><link rel="prefetch" href="/study/assets/css/1.styles.9a4bd71a.css"><link rel="prefetch" href="/study/assets/css/2.styles.fab7f89c.css"><link rel="prefetch" href="/study/assets/css/3.styles.0292a01e.css"><link rel="prefetch" href="/study/assets/css/4.styles.5640a71e.css"><link rel="prefetch" href="/study/assets/css/5.styles.c0ce815d.css"><link rel="prefetch" href="/study/assets/css/6.styles.fcb95dc6.css"><link rel="prefetch" href="/study/assets/css/7.styles.c8b06cc2.css"><link rel="prefetch" href="/study/assets/js/1.9a4bd71a.js"><link rel="prefetch" href="/study/assets/js/10.e058a7e5.js"><link rel="prefetch" href="/study/assets/js/11.5393a9a6.js"><link rel="prefetch" href="/study/assets/js/12.85b9f659.js"><link rel="prefetch" href="/study/assets/js/13.fab64d1d.js"><link rel="prefetch" href="/study/assets/js/14.f73d840e.js"><link rel="prefetch" href="/study/assets/js/15.d28057ad.js"><link rel="prefetch" href="/study/assets/js/16.eae80edc.js"><link rel="prefetch" href="/study/assets/js/17.94bdb325.js"><link rel="prefetch" href="/study/assets/js/18.18f2e4d3.js"><link rel="prefetch" href="/study/assets/js/19.73b3cad5.js"><link rel="prefetch" href="/study/assets/js/2.fab7f89c.js"><link rel="prefetch" href="/study/assets/js/20.41cbc980.js"><link rel="prefetch" href="/study/assets/js/21.ac0b4f36.js"><link rel="prefetch" href="/study/assets/js/22.27544958.js"><link rel="prefetch" href="/study/assets/js/23.381f8e14.js"><link rel="prefetch" href="/study/assets/js/24.6688820c.js"><link rel="prefetch" href="/study/assets/js/25.0f3cd4e0.js"><link rel="prefetch" href="/study/assets/js/26.1587fd22.js"><link rel="prefetch" href="/study/assets/js/27.8c8bf67b.js"><link rel="prefetch" href="/study/assets/js/28.8398db86.js"><link rel="prefetch" href="/study/assets/js/3.0292a01e.js"><link rel="prefetch" href="/study/assets/js/30.0ef8d19e.js"><link rel="prefetch" href="/study/assets/js/31.6f5025b5.js"><link rel="prefetch" href="/study/assets/js/32.ad388b67.js"><link rel="prefetch" href="/study/assets/js/33.c5f3ce23.js"><link rel="prefetch" href="/study/assets/js/34.65b99507.js"><link rel="prefetch" href="/study/assets/js/35.7012f26e.js"><link rel="prefetch" href="/study/assets/js/36.e577c804.js"><link rel="prefetch" href="/study/assets/js/37.65cfbec8.js"><link rel="prefetch" href="/study/assets/js/38.50303de0.js"><link rel="prefetch" href="/study/assets/js/39.358f53b2.js"><link rel="prefetch" href="/study/assets/js/4.5640a71e.js"><link rel="prefetch" href="/study/assets/js/40.45472df0.js"><link rel="prefetch" href="/study/assets/js/41.54278bf9.js"><link rel="prefetch" href="/study/assets/js/42.b2e466da.js"><link rel="prefetch" href="/study/assets/js/43.ee7cab7b.js"><link rel="prefetch" href="/study/assets/js/44.0e9444d0.js"><link rel="prefetch" href="/study/assets/js/45.1415b803.js"><link rel="prefetch" href="/study/assets/js/46.bdc84e10.js"><link rel="prefetch" href="/study/assets/js/47.008bfdb4.js"><link rel="prefetch" href="/study/assets/js/48.97e7870d.js"><link rel="prefetch" href="/study/assets/js/49.d61ca456.js"><link rel="prefetch" href="/study/assets/js/5.c0ce815d.js"><link rel="prefetch" href="/study/assets/js/50.664d32ab.js"><link rel="prefetch" href="/study/assets/js/51.386a7ad5.js"><link rel="prefetch" href="/study/assets/js/52.a6621eec.js"><link rel="prefetch" href="/study/assets/js/53.0268e383.js"><link rel="prefetch" href="/study/assets/js/54.ccccaca0.js"><link rel="prefetch" href="/study/assets/js/55.5b9d26be.js"><link rel="prefetch" href="/study/assets/js/56.64fafe6a.js"><link rel="prefetch" href="/study/assets/js/57.41d34f31.js"><link rel="prefetch" href="/study/assets/js/58.f9f5d87b.js"><link rel="prefetch" href="/study/assets/js/59.d084f0d6.js"><link rel="prefetch" href="/study/assets/js/6.fcb95dc6.js"><link rel="prefetch" href="/study/assets/js/60.1942bb51.js"><link rel="prefetch" href="/study/assets/js/61.da788876.js"><link rel="prefetch" href="/study/assets/js/62.fd979fb1.js"><link rel="prefetch" href="/study/assets/js/63.ff52fef0.js"><link rel="prefetch" href="/study/assets/js/64.2ce7207b.js"><link rel="prefetch" href="/study/assets/js/65.11fb12f7.js"><link rel="prefetch" href="/study/assets/js/66.6a6f1978.js"><link rel="prefetch" href="/study/assets/js/67.634b65a1.js"><link rel="prefetch" href="/study/assets/js/68.76b6162d.js"><link rel="prefetch" href="/study/assets/js/69.9b398548.js"><link rel="prefetch" href="/study/assets/js/7.c8b06cc2.js"><link rel="prefetch" href="/study/assets/js/8.58800656.js"><link rel="prefetch" href="/study/assets/js/9.a069f996.js">
-    <link rel="stylesheet" href="/study/assets/css/styles.14c5c194.css">
+    <link rel="preload" href="/study/assets/css/styles.ea8eda20.css" as="style"><link rel="preload" href="/study/assets/js/app.ea8eda20.js" as="script"><link rel="preload" href="/study/assets/js/29.250aa4f0.js" as="script"><link rel="prefetch" href="/study/assets/css/1.styles.9a4bd71a.css"><link rel="prefetch" href="/study/assets/css/2.styles.fab7f89c.css"><link rel="prefetch" href="/study/assets/css/3.styles.0292a01e.css"><link rel="prefetch" href="/study/assets/css/4.styles.5640a71e.css"><link rel="prefetch" href="/study/assets/css/5.styles.c0ce815d.css"><link rel="prefetch" href="/study/assets/css/6.styles.fcb95dc6.css"><link rel="prefetch" href="/study/assets/css/7.styles.c8b06cc2.css"><link rel="prefetch" href="/study/assets/js/1.9a4bd71a.js"><link rel="prefetch" href="/study/assets/js/10.e058a7e5.js"><link rel="prefetch" href="/study/assets/js/11.5393a9a6.js"><link rel="prefetch" href="/study/assets/js/12.85b9f659.js"><link rel="prefetch" href="/study/assets/js/13.fab64d1d.js"><link rel="prefetch" href="/study/assets/js/14.f73d840e.js"><link rel="prefetch" href="/study/assets/js/15.d28057ad.js"><link rel="prefetch" href="/study/assets/js/16.eae80edc.js"><link rel="prefetch" href="/study/assets/js/17.94bdb325.js"><link rel="prefetch" href="/study/assets/js/18.18f2e4d3.js"><link rel="prefetch" href="/study/assets/js/19.73b3cad5.js"><link rel="prefetch" href="/study/assets/js/2.fab7f89c.js"><link rel="prefetch" href="/study/assets/js/20.41cbc980.js"><link rel="prefetch" href="/study/assets/js/21.ac0b4f36.js"><link rel="prefetch" href="/study/assets/js/22.27544958.js"><link rel="prefetch" href="/study/assets/js/23.381f8e14.js"><link rel="prefetch" href="/study/assets/js/24.6688820c.js"><link rel="prefetch" href="/study/assets/js/25.0f3cd4e0.js"><link rel="prefetch" href="/study/assets/js/26.1587fd22.js"><link rel="prefetch" href="/study/assets/js/27.8c8bf67b.js"><link rel="prefetch" href="/study/assets/js/28.8398db86.js"><link rel="prefetch" href="/study/assets/js/3.0292a01e.js"><link rel="prefetch" href="/study/assets/js/30.0ef8d19e.js"><link rel="prefetch" href="/study/assets/js/31.6f5025b5.js"><link rel="prefetch" href="/study/assets/js/32.ad388b67.js"><link rel="prefetch" href="/study/assets/js/33.1bb7409f.js"><link rel="prefetch" href="/study/assets/js/34.65b99507.js"><link rel="prefetch" href="/study/assets/js/35.7012f26e.js"><link rel="prefetch" href="/study/assets/js/36.e577c804.js"><link rel="prefetch" href="/study/assets/js/37.65cfbec8.js"><link rel="prefetch" href="/study/assets/js/38.50303de0.js"><link rel="prefetch" href="/study/assets/js/39.358f53b2.js"><link rel="prefetch" href="/study/assets/js/4.5640a71e.js"><link rel="prefetch" href="/study/assets/js/40.45472df0.js"><link rel="prefetch" href="/study/assets/js/41.54278bf9.js"><link rel="prefetch" href="/study/assets/js/42.b2e466da.js"><link rel="prefetch" href="/study/assets/js/43.ee7cab7b.js"><link rel="prefetch" href="/study/assets/js/44.0e9444d0.js"><link rel="prefetch" href="/study/assets/js/45.1415b803.js"><link rel="prefetch" href="/study/assets/js/46.bdc84e10.js"><link rel="prefetch" href="/study/assets/js/47.008bfdb4.js"><link rel="prefetch" href="/study/assets/js/48.97e7870d.js"><link rel="prefetch" href="/study/assets/js/49.d61ca456.js"><link rel="prefetch" href="/study/assets/js/5.c0ce815d.js"><link rel="prefetch" href="/study/assets/js/50.664d32ab.js"><link rel="prefetch" href="/study/assets/js/51.386a7ad5.js"><link rel="prefetch" href="/study/assets/js/52.a6621eec.js"><link rel="prefetch" href="/study/assets/js/53.0268e383.js"><link rel="prefetch" href="/study/assets/js/54.ccccaca0.js"><link rel="prefetch" href="/study/assets/js/55.5b9d26be.js"><link rel="prefetch" href="/study/assets/js/56.64fafe6a.js"><link rel="prefetch" href="/study/assets/js/57.41d34f31.js"><link rel="prefetch" href="/study/assets/js/58.f9f5d87b.js"><link rel="prefetch" href="/study/assets/js/59.d084f0d6.js"><link rel="prefetch" href="/study/assets/js/6.fcb95dc6.js"><link rel="prefetch" href="/study/assets/js/60.1942bb51.js"><link rel="prefetch" href="/study/assets/js/61.da788876.js"><link rel="prefetch" href="/study/assets/js/62.fd979fb1.js"><link rel="prefetch" href="/study/assets/js/63.ff52fef0.js"><link rel="prefetch" href="/study/assets/js/64.2ce7207b.js"><link rel="prefetch" href="/study/assets/js/65.11fb12f7.js"><link rel="prefetch" href="/study/assets/js/66.6a6f1978.js"><link rel="prefetch" href="/study/assets/js/67.634b65a1.js"><link rel="prefetch" href="/study/assets/js/68.76b6162d.js"><link rel="prefetch" href="/study/assets/js/69.9b398548.js"><link rel="prefetch" href="/study/assets/js/7.c8b06cc2.js"><link rel="prefetch" href="/study/assets/js/8.58800656.js"><link rel="prefetch" href="/study/assets/js/9.a069f996.js">
+    <link rel="stylesheet" href="/study/assets/css/styles.ea8eda20.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">前端知识点总结</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study/zh/standard/Start.html" class="nav-link">快速搭建开发环境</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cooperation.html" class="nav-link">前后端交互</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/index.html" class="nav-link">面试必看</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/question.html" class="nav-link">经典面试</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/Algorithm.html" class="nav-link router-link-exact-active router-link-active">算法题</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interface/Mind.html" class="nav-link">在线思维导图</a></li><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li></ul></div></div> <a href="https://github.com/16323zilan/study" target="_blank" rel="noopener noreferrer" class="repo-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">前端知识点总结</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study/zh/standard/Start.html" class="nav-link">快速搭建开发环境</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cooperation.html" class="nav-link">前后端交互</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/index.html" class="nav-link">面试必看</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/question.html" class="nav-link">经典面试</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/Algorithm.html" class="nav-link router-link-exact-active router-link-active">算法题</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interface/Mind.html" class="nav-link">在线思维导图</a></li><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li></ul></div></div> <a href="https://github.com/16323zilan/study" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study/zh/standard/Start.html" class="nav-link">快速搭建开发环境</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cooperation.html" class="nav-link">前后端交互</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/index.html" class="nav-link">面试必看</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/question.html" class="nav-link">经典面试</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/Algorithm.html" class="nav-link router-link-exact-active router-link-active">算法题</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interface/Mind.html" class="nav-link">在线思维导图</a></li><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li></ul></div></div> <a href="https://github.com/16323zilan/study" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <!----> </div> <div class="page"> <div class="content"><h4 id="请用递归的方式遍历树形数据结构中的每一个节点"><a href="#请用递归的方式遍历树形数据结构中的每一个节点" aria-hidden="true" class="header-anchor">#</a> 请用递归的方式遍历树形数据结构中的每一个节点</h4> <div class="language- extra-class"><pre class="language-text"><code>const options = [
-    {
-        value: 'zhejiang',
-        label: 'Zhejiang',
-        children: [
-            {
-                value: 'hangzhou',
-                label: 'Hangzhou',
-                children: [
-                    {
-                        value: 'xihu',
-                        label: 'West Lake'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        value: 'jiangsu',
-        label: 'Jiangsu',
-        children: [
-            {
-                value: 'nanjing',
-                label: 'Nanjing',
-                children: [
-                    {
-                        value: 'zhonghuamen',
-                        label: 'Zhong Hua Men'
-                    }
-                ]
-            }
-        ]
-    }
-];
-var elementBox = document.querySelector('.box');
-var arr = &quot;&quot;;
-function render(opt) {
-    arr += '&lt;ul&gt;';
-    opt.forEach(item =&gt; {
-        arr += '&lt;li&gt;';
-        arr += '&lt;h3&gt;' + item.value + '&lt;/h3&gt;';
-        if (item.children &amp;&amp; item.children.length &gt; 0) {
-            render(item.children)
-        }
-        arr += '&lt;/li&gt;';
-    })
-    arr += '&lt;/ul&gt;';
-}
-render(options);
-elementBox.innerHTML = arr;
-</code></pre></div><h4 id="将类似以下json表示的树状结构-可以无限层级-通过parsedom函数-使用document-createelement-document-createtextnode-appendchild等方法-生成一颗dom树-返回一个element元素"><a href="#将类似以下json表示的树状结构-可以无限层级-通过parsedom函数-使用document-createelement-document-createtextnode-appendchild等方法-生成一颗dom树-返回一个element元素" aria-hidden="true" class="header-anchor">#</a> 将类似以下JSON表示的树状结构(可以无限层级)通过parseDOM函数(使用document.createElement,document.createTextNode,appendChild等方法)生成一颗DOM树(返回一个element元素)</h4> <div class="language- extra-class"><pre class="language-text"><code>const JsonTree = [
-    {
-        &quot;tagName&quot;: &quot;ul&quot;,
-        &quot;props&quot;: {
-            &quot;className&quot;: &quot;list&quot;,
-            &quot;data-name&quot;: &quot;jsontree&quot;
-        },
-        &quot;children&quot;: [
-            {
-                &quot;tagName&quot;: &quot;li&quot;,
-                &quot;props&quot;: {
-                    &quot;className&quot;: &quot;list&quot;,
-                    &quot;data-name&quot;: &quot;jsontree&quot;
-                },
-                &quot;children&quot;: &quot;一棵开花的树&quot;
-            },
-            {
-                &quot;tagName&quot;: &quot;li&quot;,
-                &quot;props&quot;: {
-                    &quot;className&quot;: &quot;list&quot;,
-                    &quot;data-name&quot;: &quot;jsontree&quot;
-                },
-                &quot;children&quot;: &quot;席慕容&quot;
-            },
-            {
-                &quot;tagName&quot;: &quot;li&quot;,
-                &quot;props&quot;: {
-                    &quot;className&quot;: &quot;list&quot;,
-                    &quot;data-name&quot;: &quot;jsontree&quot;
-                },
-                &quot;children&quot;: [
-                    {
-                        &quot;tagName&quot;: &quot;p&quot;,
-                        &quot;props&quot;: {
-                            &quot;className&quot;: &quot;list&quot;,
-                            &quot;data-name&quot;: &quot;jsontree&quot;
-                        },
-                        &quot;children&quot;: &quot;海子&quot;
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        &quot;tagName&quot;: &quot;a&quot;,
-        &quot;props&quot;: {
-            &quot;href&quot;: &quot;https://www.aliyun.com&quot;,
-            &quot;target&quot;: &quot;_blank&quot;
-        },
-        &quot;children&quot;: &quot;阿里云&quot;
-    }
-];
-var tree = document.querySelector('.tree');
-function parseDOM(opt, tree) {
-    opt.forEach(item =&gt; {
-        var elementTree = document.createElement(item.tagName);
-        if (item.props) {
-            for (val in item.props) {
-                elementTree[val] = item.props[val];
-            }
-        }
-        if (item.children) {
-            //判断此处是否为数组，数组递归，不是数组，直接作为节点的文本内容
-            if (item.children instanceof Array &amp;&amp; item.children.length &gt; 0){
-                parseDOM(item.children, elementTree)
-            }else{
-                elementTree.innerHTML = item.children;
-            }
-        }
-        tree.appendChild(elementTree)
-    })
-}
-//调用传入dom树数据，父节点
-parseDOM(JsonTree, tree);
-</code></pre></div><h4 id="不借助外部变量，交换两数"><a href="#不借助外部变量，交换两数" aria-hidden="true" class="header-anchor">#</a> 不借助外部变量，交换两数</h4> <div class="language- extra-class"><pre class="language-text"><code>function numberChange(a,b){
-    a=a+b;
-    b=a-b;
-    a=a-b;
-    return {a,b}
-}
-numberChange(7,8)//{a: 8, b: 7}
-</code></pre></div><h4 id="可借助外部变量"><a href="#可借助外部变量" aria-hidden="true" class="header-anchor">#</a> 可借助外部变量</h4> <div class="language- extra-class"><pre class="language-text"><code>function numChange(a,b){
-    var temp=null;
-    temp=a;
-    a=b;
-    b=temp;
-    return {a,b}
-}
-numChange(8,9)//{a: 9, b: 8}
-</code></pre></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/16323zilan/study/edit/master/src/zh/interview/Algorithm.md" target="_blank" rel="noopener noreferrer">帮助我们改进内容</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-5-7 22:02:32</span></div></div> <!----> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div> <!----></div></div>
-    <script src="/study/assets/js/app.14c5c194.js" defer></script><script src="/study/assets/js/29.13ee89db.js" defer></script>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>算法题</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/study/zh/interview/Algorithm.html#递归的方式遍历树形数据结构" class="sidebar-link">递归的方式遍历树形数据结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/study/zh/interview/Algorithm.html#两数交换" class="sidebar-link">两数交换</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/study/zh/interview/Algorithm.html#排序" class="sidebar-link">排序</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="递归的方式遍历树形数据结构"><a href="#递归的方式遍历树形数据结构" aria-hidden="true" class="header-anchor">#</a> 递归的方式遍历树形数据结构</h2> <ol><li>请用递归的方式遍历树形数据结构中的每一个节点</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        value<span class="token punctuation">:</span> <span class="token string">'zhejiang'</span><span class="token punctuation">,</span>
+        label<span class="token punctuation">:</span> <span class="token string">'Zhejiang'</span><span class="token punctuation">,</span>
+        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                value<span class="token punctuation">:</span> <span class="token string">'hangzhou'</span><span class="token punctuation">,</span>
+                label<span class="token punctuation">:</span> <span class="token string">'Hangzhou'</span><span class="token punctuation">,</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        value<span class="token punctuation">:</span> <span class="token string">'xihu'</span><span class="token punctuation">,</span>
+                        label<span class="token punctuation">:</span> <span class="token string">'West Lake'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        value<span class="token punctuation">:</span> <span class="token string">'jiangsu'</span><span class="token punctuation">,</span>
+        label<span class="token punctuation">:</span> <span class="token string">'Jiangsu'</span><span class="token punctuation">,</span>
+        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                value<span class="token punctuation">:</span> <span class="token string">'nanjing'</span><span class="token punctuation">,</span>
+                label<span class="token punctuation">:</span> <span class="token string">'Nanjing'</span><span class="token punctuation">,</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        value<span class="token punctuation">:</span> <span class="token string">'zhonghuamen'</span><span class="token punctuation">,</span>
+                        label<span class="token punctuation">:</span> <span class="token string">'Zhong Hua Men'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> elementBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">opt</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr <span class="token operator">+=</span> <span class="token string">'&lt;ul&gt;'</span><span class="token punctuation">;</span>
+    opt<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        arr <span class="token operator">+=</span> <span class="token string">'&lt;li&gt;'</span><span class="token punctuation">;</span>
+        arr <span class="token operator">+=</span> <span class="token string">'&lt;h3&gt;'</span> <span class="token operator">+</span> item<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">'&lt;/h3&gt;'</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>children <span class="token operator">&amp;&amp;</span> item<span class="token punctuation">.</span>children<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">render</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>children<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        arr <span class="token operator">+=</span> <span class="token string">'&lt;/li&gt;'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    arr <span class="token operator">+=</span> <span class="token string">'&lt;/ul&gt;'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">render</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+elementBox<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+</code></pre></div><ol start="2"><li>将类似以下JSON表示的树状结构(可以无限层级)通过parseDOM函数(使用document.createElement,document.createTextNode,appendChild等方法)生成一颗DOM树(返回一个element元素)</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> JsonTree <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;ul&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;className&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;data-name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jsontree&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;li&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;className&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string">&quot;data-name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jsontree&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;一棵开花的树&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;li&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;className&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string">&quot;data-name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jsontree&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;席慕容&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;li&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">&quot;className&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string">&quot;data-name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jsontree&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;p&quot;</span><span class="token punctuation">,</span>
+                        <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                            <span class="token string">&quot;className&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+                            <span class="token string">&quot;data-name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jsontree&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;海子&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">&quot;tagName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;props&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;href&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;https://www.aliyun.com&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;target&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;_blank&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;children&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;阿里云&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> tree <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.tree'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">parseDOM</span><span class="token punctuation">(</span><span class="token parameter">opt<span class="token punctuation">,</span> tree</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    opt<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> elementTree <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>tagName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>val <span class="token keyword">in</span> item<span class="token punctuation">.</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                elementTree<span class="token punctuation">[</span>val<span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">.</span>props<span class="token punctuation">[</span>val<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>children<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//判断此处是否为数组，数组递归，不是数组，直接作为节点的文本内容</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>children <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token operator">&amp;&amp;</span> item<span class="token punctuation">.</span>children<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">parseDOM</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>children<span class="token punctuation">,</span> elementTree<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                elementTree<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> item<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        tree<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>elementTree<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//调用传入dom树数据，父节点</span>
+<span class="token function">parseDOM</span><span class="token punctuation">(</span>JsonTree<span class="token punctuation">,</span> tree<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="两数交换"><a href="#两数交换" aria-hidden="true" class="header-anchor">#</a> 两数交换</h2> <ol><li>不借助外部变量，交换两数</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">numberChange</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    a<span class="token operator">=</span>a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+    b<span class="token operator">=</span>a<span class="token operator">-</span>b<span class="token punctuation">;</span>
+    a<span class="token operator">=</span>a<span class="token operator">-</span>b<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>a<span class="token punctuation">,</span>b<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">numberChange</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token comment">//{a: 8, b: 7}</span>
+</code></pre></div><ol start="2"><li>可借助外部变量</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">numChange</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> temp<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span>
+    temp<span class="token operator">=</span>a<span class="token punctuation">;</span>
+    a<span class="token operator">=</span>b<span class="token punctuation">;</span>
+    b<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>a<span class="token punctuation">,</span>b<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">numChange</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token comment">//{a: 9, b: 8}</span>
+</code></pre></div><h2 id="排序"><a href="#排序" aria-hidden="true" class="header-anchor">#</a> 排序</h2> <ol><li>冒泡排序</li></ol> <ul><li><p>比较相邻的两个元素，如果前一个比后一个大，则交换位置。</p></li> <li><p>第一轮的时候最后一个元素应该是最大的一个。</p></li> <li><p>按照步骤一的方法进行相邻两个元素的比较，这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。</p></li> <li><p>时间复杂度O(n^2),最好情况O(n),最坏情况O(n^2)，空间复杂度O(1),稳定</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token parameter">elements</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> elements<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> elements<span class="token punctuation">.</span>length <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> elements<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">var</span> swap <span class="token operator">=</span> elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> elements<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                elements<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> swap<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="2"><li>快速排序</li></ol> <ul><li>对冒泡排序的一种改进，第一趟排序将数据分成两部分，一部分比另一部分的所有数据都要小，然后递归调用，在两边都实行快速排序。</li> <li>时间复杂度O(n logn),最好情况O(n logn),最坏情况O(n^2)，空间复杂度O(1),不稳定</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">quickSort</span><span class="token punctuation">(</span><span class="token parameter">elements</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//如果数组&lt;=1,则直接返回</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>elements<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> elements<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//</span>
+    <span class="token keyword">var</span> pivotIndex <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>elements<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//确定基准数</span>
+    <span class="token keyword">var</span> pivot <span class="token operator">=</span> elements<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>pivotIndex<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> left <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> right<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> elements<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pivot<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            left<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            right<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span>pivot<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">quickSort</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="3"><li>插入排序</li></ol> <ul><li>时间复杂度O(n^2),最好情况O(n),最坏情况O(n^2)，空间复杂度O(1),稳定
+a. 从第一个元素开始，该元素已经被排序</li></ul> <p>b.取出下一个元素，在已经排序的元素序列中从后向前扫描</p> <p>c.如果该元素（以排序）大于新元素，将该元素移到下一个元素位置</p> <p>d.重复步骤,直到找到已排序的元素小于或者等于新元素的位置</p> <p>e.将新元素插入到下一个位置中</p> <p>f.重复步骤b</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//假设第零个元素是一个有序的数列，第一个以后的是无序的序列</span>
+<span class="token comment">//从第一个元素开始将无序数列的元素插入到有序数列中</span>
+<span class="token comment">//升序排序</span>
+<span class="token keyword">function</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token parameter">elements</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> elements<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> elements<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//取出无序数列中的第i个作为被插元素</span>
+            <span class="token keyword">var</span> guard <span class="token operator">=</span> elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">//现在的j代表i的上一个下标</span>
+            <span class="token keyword">var</span> j <span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token comment">//记住有序数列的最后一个位置，并且将有序数列位置扩大一个</span>
+            <span class="token comment">//i的位置上为上一个元素</span>
+            elements<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">//比大小，找到被插入元素所在的位置</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>j <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> guard <span class="token operator">&lt;</span> elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                elements<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> elements<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                j<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            elements<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> guard<span class="token punctuation">;</span><span class="token comment">//插入</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="4"><li>选择排序</li></ol> <ul><li>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。</li> <li>时间复杂度O(n^2),最好情况O(n^2),最坏情况O(n^2)，空间复杂度O(1),不稳定</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">selectionSort</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> minIndex<span class="token punctuation">,</span> temp<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        minIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//寻找最小的数，保存最小数的索引</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                minIndex <span class="token operator">=</span> j<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">selectionSort</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="4"><li>折半查找</li></ol> <ul><li>首先找到一个中间值，通过与中间值比较，大的放右，小的放左，再在两边找中间值，持续操作</li> <li>折半查找必须在有序数组中才有效，无序的数组不能实现查找功能</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> dest<span class="token punctuation">,</span> start<span class="token punctuation">,</span> end</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> end <span class="token operator">=</span> end <span class="token operator">||</span> data<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        start <span class="token operator">=</span> start <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        m <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>start <span class="token operator">+</span> end<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">==</span> dest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> m<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>dest <span class="token operator">&lt;</span> data<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> dest<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> dest<span class="token punctuation">,</span> m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span>
+</code></pre></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/16323zilan/study/edit/master/src/zh/interview/Algorithm.md" target="_blank" rel="noopener noreferrer">帮助我们改进内容</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2019-5-16 20:11:00</span></div></div> <!----> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div> <!----></div></div>
+    <script src="/study/assets/js/app.ea8eda20.js" defer></script><script src="/study/assets/js/29.250aa4f0.js" defer></script>
     <script>
       var _hmt = _hmt || [];
       (function() {
