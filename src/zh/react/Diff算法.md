@@ -217,7 +217,7 @@ simulateList = [
 ];
 ```
 因此 moves 变成如下数据：
-```
+``` 
 var moves = [
   {index: 3, type: 0},
   {index: 3, type: 0},
