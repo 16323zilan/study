@@ -246,6 +246,28 @@ function sort(elements) {
 }
 sort([3,1,5,2,6,0,9,4])
 ```
+3. 选择排序
+- 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
+```js
+function selectionSort(arr) {
+    var len = arr.length;
+    var minIndex, temp;
+    for(var i = 0; i < len - 1; i++) {
+        minIndex = i;
+        for(var j = i + 1; j < len; j++) {
+            //寻找最小的数，保存最小数的索引
+            if(arr[j] < arr[minIndex]){
+                minIndex = j;
+            }
+        }
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+    return arr;
+}
+selectionSort([7,2,1,5,3,9,6])
+```
 4. 折半查找
 - 首先找到一个中间值，通过与中间值比较，大的放右，小的放左，再在两边找中间值，持续操作
 - 折半查找必须在有序数组中才有效，无序的数组不能实现查找功能
